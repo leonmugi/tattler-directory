@@ -100,7 +100,26 @@ backup/
      ├─ restaurants.metadata.json
      ├─ reviews.bson
      └─ reviews.metadata.json
-
+```
 To restore the backup:
 
 mongorestore --db=tattler "backup\tattler"
+
+### 🧠 Lessons Learned
+
+How to manage a non-relational database in JSON format using MongoDB.
+
+The importance of indexes to optimize search and query performance.
+
+How to use mongodump and mongorestore for versioned backups.
+
+Setting up a clean and scalable folder structure to integrate Express.js in later sprints.
+
+
+
+
+### 🧩 Versioning
+
+Version 1.0.0 — Sprint 1 deliverable
+
+

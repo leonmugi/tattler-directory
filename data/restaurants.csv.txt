@@ -1,0 +1,4 @@
+name,cuisine,phone,address.street,address.city,address.state,address.zip,address.coords.lat,address.coords.lng,avg_rating,price_level,tags
+Ramen Kazu,Japanese,555-1234,Av. Reforma 10,CDMX,CDMX,06000,19.4326,-99.1332,4.7,2,"noodles;ramen"
+Pizzería Roma,Italian,555-9876,Calle Italia 22,CDMX,CDMX,06100,19.4200,-99.1700,4.3,1,"pizza;family"
+Taquería El Güero,Mexican,555-2222,Calle Hidalgo 15,CDMX,CDMX,06700,19.4300,-99.1400,4.8,1,"tacos;casual"

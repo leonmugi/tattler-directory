@@ -1,0 +1,4 @@
+restaurant_name,user,rating,comment,createdAt
+Ramen Kazu,leon,5,Excelente caldo y fideos,2025-09-20T18:00:00.000Z
+Pizzería Roma,ana,4,Buena masa y salsas,2025-09-21T13:15:00.000Z
+Taquería El Güero,juan,5,Los mejores tacos de suadero,2025-09-22T20:10:00.000Z

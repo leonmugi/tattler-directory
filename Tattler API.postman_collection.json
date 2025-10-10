@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "45c0c35b-ff6b-49c9-a44f-898fa12c264e",
+		"name": "Tattler API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49157686"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/restaurants/68e8718c0e7c0f11fce88c06",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/restaurants/68e8718c0e7c0f11fce88c06",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"restaurants",
+						"68e8718c0e7c0f11fce88c06"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/restaurants/68e608008ce5a586a94dd268",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"avg_rating\": 4.9 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/restaurants/68e608008ce5a586a94dd268",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"restaurants",
+						"68e608008ce5a586a94dd268"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/restaurants/68e608008ce5a586a94dd269",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/restaurants/68e608008ce5a586a94dd269",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"restaurants",
+						"68e608008ce5a586a94dd269"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/restaurants?city=Toluca&minRating=4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/restaurants?city=Toluca&minRating=4",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"restaurants"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Toluca"
+						},
+						{
+							"key": "minRating",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/health",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/api/restaurants",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Tattler Burgers\",\r\n  \"cuisine\": \"Burgers\",\r\n  \"address\": { \"street\": \"Av. Test 123\", \"city\": \"Toluca\", \"country\": \"MX\" },\r\n  \"avg_rating\": 4.6,\r\n  \"price_level\": 2,\r\n  \"tags\": [\"casual\", \"takeout\"]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/restaurants",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"restaurants"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

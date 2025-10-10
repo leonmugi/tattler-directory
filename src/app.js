@@ -1,20 +1,21 @@
-// src/app.js
+import "dotenv/config";
 import express from "express";
-import dotenv from "dotenv";
 import cors from "cors";
-
-dotenv.config();
+import { connectMongo } from "./db/mongo.js";
+import restaurantRoutes from "./routes/restaurants.js";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ruta de prueba para saber si el server vive:
-app.get("/health", (_req, res) => {
-  res.json({ ok: true, env: process.env.NODE_ENV || "dev" });
-});
+app.get("/health", (_req, res) => res.json({ ok:true, env: process.env.NODE_ENV || "dev" }));
+app.use("/api/restaurants", restaurantRoutes);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`API running on http://localhost:${PORT}`);
-});
+app.use((err, _req, res, _next) => res.status(err.status || 500).json({ error: err.message || "Unexpected error" }));
+
+const port = process.env.PORT || 3000;
+connectMongo(process.env.MONGODB_URI)
+  .then(() => app.listen(port, () => console.log(`API running on http://localhost:${port}`)))
+  .catch(e => { console.error("Mongo error:", e.message); process.exit(1); });
+
+export default app;

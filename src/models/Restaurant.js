@@ -1,22 +1,26 @@
-import mongoose from "../db/mongo.js";
+// models/Restaurant.js
+import mongoose from "mongoose";
 
-const RestaurantSchema = new mongoose.Schema(
-  {
-    name: { type: String, required: true, trim: true },
-    cuisine: { type: String, index: true },
-    address: { street: String, city: { type: String, index: true }, state: String, country: String },
-    avg_rating: { type: Number, min: 0, max: 5, default: 0 },
-    price_level: { type: Number, min: 1, max: 4 },
-    tags: [String]
-  },
-  { timestamps: true }
-);
+const RestaurantSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  cuisine: { type: String, index: true },
+  avg_rating: { type: Number, default: 0 },
+  price_level: { type: Number, default: 1 }, // 1=barato ... 4=caro (ajusta a tu escala)
+  tags: { type: [String], default: [] },
+  address: {
+    city: { type: String, index: true }
+  }
+}, { timestamps: true }); // createdAt/updatedAt
 
-RestaurantSchema.index({ name: "text" });
-RestaurantSchema.index({ tags: 1 });
-RestaurantSchema.index({ "address.city": 1, cuisine: 1 });
+// Índices para filtros y ordenamiento:
+RestaurantSchema.index({ "address.city": 1 });
+RestaurantSchema.index({ cuisine: 1 });
 RestaurantSchema.index({ avg_rating: -1 });
 RestaurantSchema.index({ price_level: 1 });
+RestaurantSchema.index({ tags: 1 });
+RestaurantSchema.index({ createdAt: -1 });
+// Opcional para ordenar/buscar por nombre:
+RestaurantSchema.index({ name: 1 });
 
 export default mongoose.model("Restaurant", RestaurantSchema);
 

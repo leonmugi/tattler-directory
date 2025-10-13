@@ -356,7 +356,7 @@ In production, replace with your deployed host (e.g., https://api.tattler.mx).
 
 Not required for the challenge scope.
 
-### 2.5 Endpoints
+
 
 #### Health
 **GET** `/health`
@@ -610,3 +610,4 @@ I used **MongoDB Compass** to connect to the project database, browse collection
 ## 🏁 Versioning
 
 **Version 3.0.0 — Sprint 2 deliverable** *(builds on Sprint 1 database work)*
+

@@ -582,7 +582,7 @@ I used **MongoDB Compass** to connect to the project database, browse collection
 ### Cumulative (Sprint 2 + Sprint 3)
 | Period    | Hours | Cost (MXN) |
 |-----------|:-----:|-----------:|
-| Sprint 2  |  8.5  |     5,125  |
+| Sprint 2  |  20.5  |     5,125  |
 | Sprint 3  |  6.5  |     1,625  |
 | **Total** | **15.0** | **6,750** |
 
@@ -610,5 +610,6 @@ I used **MongoDB Compass** to connect to the project database, browse collection
 ## 🏁 Versioning
 
 **Version 3.0.0 — Sprint 2 deliverable** *(builds on Sprint 1 database work)*
+
 
 
